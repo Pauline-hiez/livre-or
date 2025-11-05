@@ -12,10 +12,10 @@
     <header>
         <nav>
             <ul>
-                <li><a class="accueil" href="index.php">Accueil</a></li>
-                <li><a href="inscription.php">Inscription</a></li>
-                <li><a href="connexion.php">Connexion</a></li>
-                <li><a href="livre-or.php">Livre d'or</a></li>
+                <li><a class="accueil" href="/livreor/view/home/index.php">Accueil</a></li>
+                <li><a href="/livreor/view/auth/inscription.php">Inscription</a></li>
+                <li><a href="/livreor/view/auth/connexion.php">Connexion</a></li>
+                <li><a href="/livreor/view/livreor/livre-or.php">Livre d'or</a></li>
             </ul>
         </nav>
     </header>
