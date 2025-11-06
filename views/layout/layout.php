@@ -21,10 +21,12 @@
         </nav>
     </header>
 
-    <main class="main-content">
+    <div class="flash-message">
         <?php display_flash(); ?>
-        <?= $content; ?>
+    </div>
 
+    <main class="main-content">
+        <?= $content; ?>
     </main>
 
 

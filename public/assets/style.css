@@ -26,6 +26,10 @@ body {
 
 /* Layout */
 
+nav {
+  margin-bottom: 20px;
+}
+
 /* Header */
 h2, p {
   margin: 10px;
@@ -116,7 +120,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 40px 20px;
+    margin: 20px;
 }
 
 .auth-container {
@@ -124,6 +128,7 @@ footer {
     border-radius: 20px;
     box-shadow: 0 10px 40px rgba(87, 87, 87, 0.15);
     padding: 50px 40px;
+    margin-top: 20px;
     max-width: 450px;
     width: 100%;
     position: relative;
@@ -265,3 +270,35 @@ form {
 .switch-link a:hover {
     color: var(--secondary-hover);
 }
+
+/* Flash message */
+.flash-message {
+    height: 50px;
+    width: 450px;
+    padding: 5px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.alert-danger {
+  background-color: rgba(130, 0, 0, 0.363);
+  padding: 20px;
+  border-radius: 10px;
+  color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
+}
+
+.alert-success {
+  background-color: rgba(1, 114, 59, 0.363);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+}
+
+.alert-info {
+  background-color: rgba(101, 46, 1, 0.363);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+}
+
