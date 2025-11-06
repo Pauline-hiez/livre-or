@@ -9,7 +9,7 @@
 
 <body>
 
-    <?php require_once "../layout/layout.php"; ?>
+    <?php require_once __DIR__ . "/../layout/layout.php"; ?>
 
 </body>
 
