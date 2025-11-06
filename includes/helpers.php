@@ -75,16 +75,6 @@ function display_flash()
 }
 
 /**
- * Charge une vue avec un layout
- */
-function load_view_with_layout($view, $data = [])
-{
-    extract($data);
-    include "views/$view.php";
-    include 'views/layout/footer.php';
-}
-
-/**
  * Vérifie un mot de passe (hashé)
  */
 function verify_password($password, $hash)
@@ -117,4 +107,11 @@ function require_login()
         set_flash('error', 'Veuillez vous connecter pour accéder à cette page.');
         redirect('auth/login');
     }
+}
+
+function url($path = '')
+{
+    $base_url = rtrim(BASE_URL, '/');
+    $path = ltrim($path, '/');
+    return $base_url . '/' . $path;
 }

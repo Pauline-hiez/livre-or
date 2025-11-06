@@ -89,9 +89,8 @@ function auth_register()
     load_view_with_layout('auth/register', $data);
 }
 
-/**
- * Déconnexion
- */
+// Déconnexion
+
 function auth_logout()
 {
     logout();

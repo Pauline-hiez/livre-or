@@ -4,12 +4,16 @@
   box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Gabriela&family=Mea+Culpa&family=Story+Script&display=swap');
+
 :root {
     --primary-color: #575757;
     --primary-hover: #424242;
     --secondary-color: #D8C9AE;
     --secondary-hover: #9f937e;
     --background: #f7eedf;
+    --font-title: 'Mea Culpa', cursive;
+    --font: 
 }
 
 body {
@@ -17,9 +21,12 @@ body {
   display: flex;
   flex-direction: column;
   background: var(--background);
+  font-family: var(--font-title);
 }
 
 /* Layout */
+
+/* Header */
 h2, p {
   margin: 10px;
 }
@@ -29,6 +36,7 @@ ul {
   margin: 0;
   padding: 0;
   background: var(--primary-color);
+  font-size: 2rem;
   display: flex;
 }
 
@@ -56,6 +64,7 @@ ul li a.accueil:hover {
     background: var(--secondary-hover);
 }
 
+/* Footer */
 footer {
     background: var(--secondary-color);
     margin-top: auto;
@@ -99,4 +108,160 @@ footer {
     color: var(--primary-color);
     text-align: center;
     margin: 0;
+}
+
+/* Formulaires d'authentification */
+.main-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.auth-container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(87, 87, 87, 0.15);
+    padding: 50px 40px;
+    max-width: 450px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.auth-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--secondary-color), var(--secondary-hover), var(--primary-color));
+}
+
+.auth-container h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.auth-container > p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+}
+
+/* Formulaire */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-left: 5px;
+}
+
+.form-group p {
+    color: #888;
+    font-size: 0.75rem;
+    margin: -5px 0 5px 5px;
+    font-style: italic;
+}
+
+.form-group input {
+    padding: 14px 18px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #fafafa;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: var(--secondary-color);
+    background: white;
+    box-shadow: 0 0 0 4px rgba(216, 201, 174, 0.1);
+    transform: translateY(-2px);
+}
+
+.form-group input::placeholder {
+    color: #999;
+}
+
+/* Bouton */
+.btn {
+    background: linear-gradient(135deg, var(--secondary-color), var(--secondary-hover));
+    color: var(--primary-color);
+    border: none;
+    padding: 16px 24px;
+    border-radius: 12px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    box-shadow: 0 4px 15px rgba(216, 201, 174, 0.3);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(216, 201, 174, 0.4);
+    background: linear-gradient(135deg, var(--secondary-hover), var(--primary-color));
+    color: white;
+}
+
+.btn:active {
+    transform: translateY(-1px);
+}
+
+/* Lien de switch */
+.switch-link {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.switch-link a {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.switch-link a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--secondary-color);
+    transition: width 0.3s ease;
+}
+
+.switch-link a:hover::after {
+    width: 100%;
+}
+
+.switch-link a:hover {
+    color: var(--secondary-hover);
 }
