@@ -13,7 +13,7 @@
         <nav>
             <ul class="nav-menu">
                 <li><a class="accueil" href="<?= url(); ?>">Accueil</a></li>
-                <li><a href="<?= url('livreor/livre-or'); ?>">Livre d'or</a></li>
+                <li><a href="<?= url('livreor'); ?>">Livre d'or</a></li>
 
                 <?php if (is_logged_in()): ?>
                     <li><a href="<?= url('home/profil'); ?>">Mon profil</a></li>
