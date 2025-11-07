@@ -2,8 +2,6 @@
      <div class="auth-container">
          <h2>Connexion</h2>
 
-         <?= display_flash(); ?>
-
          <form method="post" action="">
              <div class="form-group">
                  <label for="login">Login :</label>

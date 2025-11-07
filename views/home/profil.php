@@ -1,7 +1,5 @@
 <div class="main-content">
 
-    <?= display_flash(); ?>
-
     <div class="auth-container">
         <h2>Mon profil</h2>
 
