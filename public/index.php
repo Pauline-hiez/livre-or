@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 // Point d'entrée de l'application
 
 require_once __DIR__ . '/../config/database.php';

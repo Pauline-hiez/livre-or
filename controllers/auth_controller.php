@@ -29,7 +29,7 @@ function auth_login()
 
                 $prenom = ucfirst(strtolower($user['login']));
                 set_flash('success', 'Connexion réussie, bienvenue ' . htmlspecialchars($prenom) . ' !');
-                redirect('/home');
+                redirect('/home/profil');
             } else {
                 set_flash('error', 'Login ou mot de passe incorrect.');
             }
@@ -98,4 +98,6 @@ function auth_register()
 function auth_logout()
 {
     logout();
+    redirect('/auth/login');
+    display_flash('success', "Vous êtes bien déconnecté.");
 }

@@ -11,12 +11,18 @@
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a class="accueil" href="/">Accueil</a></li>
-                <li><a href="/auth/register">Inscription</a></li>
-                <li><a href="/auth/login">Connexion</a></li>
-                <li><a href="/home/profil">Mon profil</a></li>
-                <li><a href="/livreor/livre-or">Livre d'or</a></li>
+            <ul class="nav-menu">
+                <li><a class="accueil" href="<?= url(); ?>">Accueil</a></li>
+                <li><a href="<?= url('livreor/livre-or'); ?>">Livre d'or</a></li>
+
+                <?php if (is_logged_in()): ?>
+                    <li><a href="<?= url('home/profil'); ?>">Mon profil</a></li>
+                    <li><a href="<?= url('auth/logout'); ?>">Déconnexion</a></li>
+                <?php else: ?>
+                    <li><a href="<?= url('auth/register'); ?>">Inscription</a></li>
+                    <li><a href="<?= url('auth/login'); ?>">Connexion</a></li>
+                <?php endif; ?>
+
             </ul>
         </nav>
     </header>
