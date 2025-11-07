@@ -1,18 +1,5 @@
 <?php
 
-if (!defined('ROOT')) {
-    define('ROOT', dirname(__DIR__));
-}
-if (!defined('CONTROLLER_PATH')) {
-    define('CONTROLLER_PATH', ROOT . '/controllers');
-}
-if (!defined('MODEL_PATH')) {
-    define('MODEL_PATH', ROOT . '/model');
-}
-if (!defined('VIEW_PATH')) {
-    define('VIEW_PATH', ROOT . '/view');
-}
-
 function dispatch()
 {
     $url = $_GET['url'] ?? "";

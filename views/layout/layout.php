@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" href="<?= url('assets/style.css'); ?>">
-    <link href="https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Gabriela&family=Mea+Culpa&family=Story+Script&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -16,6 +15,7 @@
                 <li><a class="accueil" href="/">Accueil</a></li>
                 <li><a href="/auth/register">Inscription</a></li>
                 <li><a href="/auth/login">Connexion</a></li>
+                <li><a href="/home/profil">Mon profil</a></li>
                 <li><a href="/livreor/livre-or">Livre d'or</a></li>
             </ul>
         </nav>

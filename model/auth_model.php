@@ -12,7 +12,7 @@ function get_user_by_login($login)
 
 function create_user($login, $password_hash)
 {
-    $query = "INSERT INTO utilisateurs (login, password) VALUES (?, ?)";
+    $query = "INSERT INTO utilisateurs (login, password_hash) VALUES (?, ?)";
     if (db_execute($query, [$login, $password_hash])) {
         return db_last_insert_id();
     }

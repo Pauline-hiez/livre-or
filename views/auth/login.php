@@ -23,7 +23,7 @@
              <button type="submit" class="btn">Se connecter</button>
 
              <p class="switch-link">
-                 Pas encore de compte ? <a href="?page=auth/register">S'inscrire</a>
+                 Pas encore de compte ? <a href="/auth/register">S'inscrire</a>
              </p>
          </form>
      </div>

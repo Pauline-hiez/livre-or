@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Gabriela&family=Mea+Culpa&family=Story+Script&display=swap');
 
 :root {
     --primary-color: #575757;
@@ -12,8 +11,6 @@
     --secondary-color: #D8C9AE;
     --secondary-hover: #9f937e;
     --background: #f7eedf;
-    --font-title: 'Mea Culpa', cursive;
-    --font: 
 }
 
 body {
@@ -40,7 +37,7 @@ ul {
   margin: 0;
   padding: 0;
   background: var(--primary-color);
-  font-size: 2rem;
+  font-size: 1rem;
   display: flex;
 }
 

@@ -6,7 +6,7 @@ function auth_login()
 {
     // Rediriger si déjà connecté
     if (is_logged_in()) {
-        redirect('home');
+        redirect('/home');
     }
 
     $data = ['title' => 'Connexion'];
@@ -29,7 +29,7 @@ function auth_login()
 
                 $prenom = ucfirst(strtolower($user['login']));
                 set_flash('success', 'Connexion réussie, bienvenue ' . htmlspecialchars($prenom) . ' !');
-                redirect('home');
+                redirect('/home');
             } else {
                 set_flash('error', 'Login ou mot de passe incorrect.');
             }
@@ -44,10 +44,12 @@ function auth_login()
 function auth_register()
 {
     if (is_logged_in()) {
-        redirect('home');
+        redirect('/home');
     }
 
-    $data = ['title' => 'Inscription'];
+    $data = [
+        'title' => 'Inscription'
+    ];
 
     if (is_post()) {
         $login = clean_input(post('login'));
@@ -75,11 +77,13 @@ function auth_register()
             $password_hash = password_hash($password, PASSWORD_DEFAULT);
 
             // Créer l'utilisateur
-            $user_id = create_user($login, $password_hash);
+            $user_login = create_user($login, $password_hash);
 
-            if ($user_id) {
+            var_dump($user_login);
+
+            if ($user_login) {
                 set_flash('success', 'Inscription réussie ! Vous pouvez maintenant vous connecter.');
-                redirect('auth/login');
+                redirect('/auth/login');
             } else {
                 set_flash('error', 'Erreur lors de l\'inscription.');
             }

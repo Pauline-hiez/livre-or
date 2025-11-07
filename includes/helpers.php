@@ -31,7 +31,7 @@ function post($key, $default = null)
  */
 function redirect($url)
 {
-    header("Location: index.php?page=$url");
+    header("Location: $url");
     exit;
 }
 
