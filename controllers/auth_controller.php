@@ -98,6 +98,6 @@ function auth_register()
 function auth_logout()
 {
     logout();
-    redirect('/auth/login');
-    display_flash('success', "Vous êtes bien déconnecté.");
+    set_flash('success', 'Vous avez été déconnecté avec succès.');
+    redirect('auth/login');
 }

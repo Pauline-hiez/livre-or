@@ -265,7 +265,7 @@ form {
 
 /* Bouton */
 .btn {
-    background: linear-gradient(135deg, var(--secondary-color), var(--secondary-hover));
+    background: var(--secondary-color);
     color: var(--primary-color);
     border: none;
     padding: 16px 24px;
@@ -281,8 +281,8 @@ form {
 .btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(216, 201, 174, 0.4);
-    background: linear-gradient(135deg, var(--secondary-hover), var(--primary-color));
-    color: white;
+    background: var(--secondary-hover);
+    color: var(--primary-color);
 }
 
 .btn:active {
@@ -338,7 +338,7 @@ form {
 }
 
 .alert-danger {
-  background-color: rgba(130, 0, 0, 0.363);
+  background-color: rgba(89, 2, 2, 0.611);
   padding: 15px 20px;
   border-radius: 10px;
   color: var(--secondary-color);
@@ -348,7 +348,7 @@ form {
 }
 
 .alert-success {
-  background-color: rgba(2, 89, 10, 0.363);
+  background-color: rgba(2, 89, 11, 0.611);
   padding: 15px 20px;
   border-radius: 10px;
   color: var(--secondary-color);
