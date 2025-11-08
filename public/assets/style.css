@@ -19,11 +19,18 @@ body {
   flex-direction: column;
   background: var(--background);
   font-family: var(--font-title);
+  overflow-x: hidden;
 }
 
 /* Layout */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
 nav {
-  margin-bottom: 20px;
+  margin-bottom: 0;
 }
 
 /* Header */
@@ -36,7 +43,7 @@ ul {
   margin: 0;
   padding: 0;
   background: var(--primary-color);
-  font-size: 1rem;
+  font-size: 1.2rem;
   display: flex;
 }
 
@@ -116,7 +123,56 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Split screen pour inscription */
+.auth-split-container {
+    display: flex;
+    width: 100%;
+    min-height: 700px;
+    max-width: 100%;
+    margin: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.auth-form-side {
+    flex: 0 0 50%;
+    width: 50%;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.auth-form-side .auth-container {
+    max-width: 450px;
+    width: 100%;
+    box-shadow: none;
+    margin: 0;
+    background: transparent;
+}
+
+.auth-form-side .auth-container::before {
+    display: none;
+}
+
+.auth-split-reverse {
+    flex-direction: row-reverse;
+}
+
+.auth-image-side {
+    flex: 0 0 50%;
+    width: 50%;
+    min-height: 700px;
+    background: url('images/formulaire.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--background);
 }
 
 .auth-container {
@@ -328,12 +384,20 @@ form {
 /* Flash message */
 .flash-message {
     width: 450px;
-    padding: 0 20px;
+    padding: 0;
     text-align: center;
-    margin: 20px auto;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 0;
+}
+
+.flash-message:empty {
+    display: none;
+    margin: 0;
+    padding: 0;
+    min-height: 0;
 }
 
 .alert-danger {
@@ -746,6 +810,21 @@ form {
 
 /* Responsive */
 @media (max-width: 768px) {
+    /* Split screen responsive */
+    .auth-split-container {
+        flex-direction: column;
+    }
+
+    .auth-image-side {
+        min-height: 300px;
+        order: -1;
+    }
+
+    .auth-form-side {
+        padding: 30px 20px;
+    }
+
+    /* Page d'accueil */
     .hero-section h1 {
         font-size: 2.5rem;
     }
