@@ -22,7 +22,6 @@ body {
 }
 
 /* Layout */
-
 nav {
   margin-bottom: 20px;
 }
@@ -67,7 +66,7 @@ ul li a.accueil:hover {
 
 /* Footer */
 footer {
-    background: var(--secondary-color);
+    background: var(--primary-color);
     margin-top: auto;
     height: 150px;
     display: flex;
@@ -78,7 +77,7 @@ footer {
 }
 
 .text-reseaux {
-    color: var(--primary-color);
+    color: var(--secondary-color);
     text-align: center;
     margin: 0;
     font-size: 1.3rem;
@@ -106,7 +105,7 @@ footer {
 }
 
 .copyright {
-    color: var(--primary-color);
+    color: var(--secondary-color);
     text-align: center;
     margin: 0;
 }
@@ -137,9 +136,9 @@ footer {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    height: 5px;
-    background: linear-gradient(90deg, var(--secondary-color), var(--secondary-hover), var(--primary-color));
+    bottom: 0;
+    width: 5px;
+    background: var(--secondary-color);
 }
 
 .auth-container h2 {
@@ -408,9 +407,9 @@ form {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    height: 5px;
-    background: linear-gradient(90deg, var(--secondary-color), var(--secondary-hover), var(--primary-color));
+    bottom: 0;
+    width: 5px;
+    background: var(--secondary-color);
 }
 
 .livreor-form textarea {
@@ -558,6 +557,223 @@ form {
     color: #888;
     font-size: 1.1rem;
     font-style: italic;
+}
+
+/* Page d'accueil - Style voyage */
+.home-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, rgba(216, 201, 174, 0.7) 0%, rgba(159, 147, 126, 0.7) 100%), url('images/carte.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 100px 20px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-section h1 {
+    color: var(--primary-color);
+    font-size: 3.5rem;
+    margin: 0 0 20px 0;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
+}
+
+.hero-subtitle {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin: 0 0 40px 0;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 16px 40px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.btn-primary:hover {
+    background: var(--primary-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+}
+
+.btn-secondary {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background: var(--secondary-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Features Section */
+.features-section {
+    padding: 80px 20px;
+    background: var(--background);
+}
+
+.features-section h2 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin: 0 0 60px 0;
+    font-weight: 600;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background: linear-gradient(135deg, rgba(250, 250, 250, 0.85), rgba(255, 255, 255, 0.85)), url('images/voyage.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(87, 87, 87, 0.1);
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 40px rgba(87, 87, 87, 0.2);
+    border-left-color: var(--secondary-hover);
+}
+
+.feature-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin: 0 0 15px 0;
+    font-weight: 600;
+}
+
+.feature-card p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, rgba(87, 87, 87, 0.85) 0%, rgba(66, 66, 66, 0.85) 100%), url('images/carte.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+}
+
+.cta-section h2 {
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+    margin: 0 0 20px 0;
+    font-weight: 600;
+}
+
+.cta-section p {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    margin: 0 0 40px 0;
+    opacity: 0.9;
+}
+
+.btn-cta {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 18px 50px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+}
+
+.btn-cta:hover {
+    background: var(--secondary-hover);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .features-section h2,
+    .cta-section h2 {
+        font-size: 2rem;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
 }
 
 
