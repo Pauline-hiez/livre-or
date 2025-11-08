@@ -33,6 +33,6 @@ function update_user($id, $login)
 function update_user_password($id, $password)
 {
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-    $query = "UPDATE utilisateurs SET password = ? WHERE id = ?";
+    $query = "UPDATE utilisateurs SET password_hash = ? WHERE id = ?";
     return db_execute($query, [$hashed_password, $id]);
 }

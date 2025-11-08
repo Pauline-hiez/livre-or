@@ -31,7 +31,7 @@ function post($key, $default = null)
  */
 function redirect($url)
 {
-    header("Location: $url");
+    header("Location: " . url($url));
     exit;
 }
 

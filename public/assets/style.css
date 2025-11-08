@@ -205,6 +205,64 @@ form {
     color: #999;
 }
 
+/* Page profil */
+.profil-info {
+    background: linear-gradient(135deg, #fafafa, #f5f5f5);
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-left: 4px solid var(--secondary-color);
+    box-shadow: 0 3px 15px rgba(87, 87, 87, 0.08);
+}
+
+.profil-info h3 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin: 0 0 15px 0;
+    font-weight: 600;
+}
+
+.profil-info p {
+    color: #555;
+    font-size: 1rem;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profil-info p strong {
+    color: var(--primary-color);
+    font-weight: 600;
+    min-width: 80px;
+}
+
+.profil-password {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    border: 2px solid #f0f0f0;
+    transition: all 0.3s ease;
+}
+
+.profil-password:hover {
+    border-color: var(--secondary-color);
+    box-shadow: 0 5px 20px rgba(216, 201, 174, 0.2);
+}
+
+.profil-password h3 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin: 0 0 25px 0;
+    font-weight: 600;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.profil-password form {
+    margin-top: 0;
+}
+
 /* Bouton */
 .btn {
     background: linear-gradient(135deg, var(--secondary-color), var(--secondary-hover));
@@ -309,4 +367,200 @@ form {
   box-sizing: border-box;
   border: 2px solid var(--secondary-color);
 }
+
+/* Livre d'or */
+.livreor-container {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.livreor-container h2 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.livreor-container h3 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin: 40px 0 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+/* Formulaire du livre d'or */
+.livreor-form {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(87, 87, 87, 0.15);
+    padding: 30px;
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.livreor-form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--secondary-color), var(--secondary-hover), var(--primary-color));
+}
+
+.livreor-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: inherit;
+    resize: vertical;
+    min-height: 120px;
+    background: #fafafa;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.livreor-form textarea:focus {
+    border-color: var(--secondary-color);
+    background: white;
+    box-shadow: 0 0 0 4px rgba(216, 201, 174, 0.1);
+}
+
+.livreor-form textarea::placeholder {
+    color: #999;
+}
+
+.livreor-form button {
+    margin-top: 15px;
+    background: linear-gradient(135deg, var(--secondary-color), var(--secondary-hover));
+    color: var(--primary-color);
+    border: none;
+    padding: 14px 30px;
+    border-radius: 12px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(216, 201, 174, 0.3);
+}
+
+.livreor-form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(216, 201, 174, 0.4);
+    background: linear-gradient(135deg, var(--secondary-hover), var(--primary-color));
+    color: white;
+}
+
+.livreor-form button:active {
+    transform: translateY(-1px);
+}
+
+.livreor-form p {
+    text-align: center;
+    color: #666;
+    font-size: 1rem;
+}
+
+.livreor-form p a {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.livreor-form p a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--secondary-color);
+    transition: width 0.3s ease;
+}
+
+.livreor-form p a:hover::after {
+    width: 100%;
+}
+
+.livreor-form p a:hover {
+    color: var(--secondary-hover);
+}
+
+/* Liste des messages */
+.messages-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Commentaire individuel */
+.commentaire {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(87, 87, 87, 0.1);
+    padding: 25px;
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.commentaire:hover {
+    box-shadow: 0 8px 30px rgba(87, 87, 87, 0.15);
+    transform: translateX(5px);
+}
+
+.commentaire-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.commentaire-author {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.commentaire-date {
+    color: #888;
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+.commentaire-content {
+    color: #333;
+    line-height: 1.6;
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Message vide */
+.no-messages {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(87, 87, 87, 0.1);
+}
+
+.no-messages p {
+    color: #888;
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+
+
+
 

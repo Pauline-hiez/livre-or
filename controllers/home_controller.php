@@ -12,7 +12,7 @@ function home_profil()
 
     if (!is_logged_in()) {
         set_flash('error', 'Vous devez être connecté pour accéder à votre profil.');
-        redirect('/auth/login');
+        redirect('auth/login');
     }
 
     $data = ['title' => 'Mon profil'];
@@ -41,7 +41,7 @@ function home_profil()
         } else {
             if (update_user_password($user_id, $new_password)) {
                 set_flash('success', 'Mot de passe mis à jour avec succès !');
-                redirect('/home/profil');
+                redirect('home/profil');
             } else {
                 set_flash('error', 'Erreur lors de la mise à jour du mot de passe.');
             }

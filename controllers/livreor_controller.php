@@ -22,11 +22,12 @@ function livreor_index()
         if (empty($content)) {
             set_flash('error', 'Le message ne peut pas être vide.');
         } else {
-            if (add_message($user_id, $content)) {
+            $result = add_message($user_id, $content);
+            if ($result) {
                 set_flash('success', 'Votre message a bien été envoyé !');
-                redirect('/livreor');
+                redirect('livreor');
             } else {
-                set_flash('error', 'Erreur lors de l\'ajout du message.');
+                set_flash('error', 'Erreur lors de l\'ajout du message. User ID: ' . $user_id);
             }
         }
     }

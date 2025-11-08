@@ -12,7 +12,7 @@
 
         <section class="profil-password">
             <h3>Modifier mon mot de passe</h3>
-            <form action="<?= url('home-update-password'); ?>" method="post">
+            <form action="" method="post">
                 <div class="form-group">
                     <label for="current_password">Mot de passe actuel :</label>
                     <input type="password" id="current_password" name="current_password" required placeholder="Entrez votre mot de passe actuel">
