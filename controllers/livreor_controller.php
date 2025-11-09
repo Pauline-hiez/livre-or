@@ -5,7 +5,10 @@ function livreor_index()
 
     // Les utilisateurs connectés peuvent poster
     $user_id = $_SESSION['user_id'] ?? null;
-    $data = ['title' => "Livre d'or"];
+    $data = [
+        'title' => "Livre d'or",
+        'body_class' => 'livreor-page'
+    ];
 
     // Récupère les messages
     $messages = get_all_messages();

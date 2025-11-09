@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="<?= url('assets/style.css'); ?>">
 </head>
 
-<body>
+<body class="<?= isset($body_class) ? htmlspecialchars($body_class) : ''; ?>">
     <header>
         <nav>
             <ul class="nav-menu">

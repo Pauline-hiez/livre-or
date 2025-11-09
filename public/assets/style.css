@@ -10,7 +10,7 @@
     --primary-hover: #424242;
     --secondary-color: #D8C9AE;
     --secondary-hover: #9f937e;
-    --background: #f7eedf;
+    --background: #fdecd0;
 }
 
 body {
@@ -20,6 +20,14 @@ body {
   background: var(--background);
   font-family: var(--font-title);
   overflow-x: hidden;
+}
+
+/* Style spécifique pour la page livre d'or */
+body.livreor-page {
+  background: linear-gradient(135deg, rgba(216, 201, 174, 0.7) 0%, rgba(159, 147, 126, 0.7) 100%), url('images/carte.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 /* Layout */
@@ -437,6 +445,7 @@ form {
     width: 100%;
     margin: 0 auto;
     padding: 20px;
+    min-height: calc(100vh - 160px);
 }
 
 .livreor-container h2 {
