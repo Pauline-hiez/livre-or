@@ -4,6 +4,9 @@
   box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Gabriela&family=Imperial+Script&family=League+Script&family=Mea+Culpa&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Story+Script&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Gabriela&family=Imperial+Script&family=League+Script&family=Mea+Culpa&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Story+Script&display=swap');
 
 :root {
     --primary-color: #575757;
@@ -11,6 +14,8 @@
     --secondary-color: #D8C9AE;
     --secondary-hover: #9f937e;
     --background: #fdecd0;
+    --title: 'Imperial Script', cursive;
+    --font: 'roboto';
 }
 
 body {
@@ -18,8 +23,13 @@ body {
   display: flex;
   flex-direction: column;
   background: var(--background);
-  font-family: var(--font-title);
+  font-family: var(--font);
   overflow-x: hidden;
+
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--title);
 }
 
 /* Style spécifique pour la page livre d'or */
@@ -301,7 +311,9 @@ form {
 }
 
 .profil-password {
-    background: white;
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('images/voyage.jpg');
+    background-size: cover;
+    background-position: center;
     border-radius: 15px;
     padding: 30px;
     border: 2px solid #f0f0f0;
@@ -613,8 +625,9 @@ form {
 .commentaire-content {
     color: #333;
     line-height: 1.6;
-    font-size: 1rem;
+    font-size: 1.7rem;
     margin: 0;
+    font-family: var(--title);
 }
 
 /* Message vide */

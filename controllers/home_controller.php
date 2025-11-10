@@ -15,7 +15,10 @@ function home_profil()
         redirect('auth/login');
     }
 
-    $data = ['title' => 'Mon profil'];
+    $data = [
+        'title' => 'Mon profil',
+        'body_class' => 'livreor-page'
+    ];
     $user_id = $_SESSION['user_id'];
     $user = get_user_by_id($user_id);
     $data['user'] = $user;
