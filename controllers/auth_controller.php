@@ -79,8 +79,6 @@ function auth_register()
             // Créer l'utilisateur
             $user_login = create_user($login, $password_hash);
 
-            var_dump($user_login);
-
             if ($user_login) {
                 set_flash('success', 'Inscription réussie ! Vous pouvez maintenant vous connecter.');
                 redirect('/auth/login');
